@@ -10,9 +10,9 @@ test('has title', async ({ page }) => {
 test('get started link', async ({ page }) => {
   await page.goto('https://e-commerce-dev.betterbytesvn.com/');
 
-  // Click the get started link.
+  // Click the My Account link.
   await page.getByRole('link', { name: 'My Account' }).click();
 
-  // Expects page to have a heading with the name of Installation.
+  // Expects page to have a heading with the name of My Account.
   await expect(page.getByRole('heading', { name: 'My account' })).toBeVisible();
 });
